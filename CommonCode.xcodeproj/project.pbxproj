@@ -8,8 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		5B7EBD97207EA79A00E5049C /* CommonCode.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B7EBD8D207EA79A00E5049C /* CommonCode.framework */; };
-		5B7EBD9C207EA79A00E5049C /* CommonCodeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B7EBD9B207EA79A00E5049C /* CommonCodeTests.m */; };
 		5B7EBD9E207EA79A00E5049C /* CommonCode.h in Headers */ = {isa = PBXBuildFile; fileRef = 5B7EBD90207EA79A00E5049C /* CommonCode.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5B7EBDAA207EAD1600E5049C /* DVGenerics.h in Headers */ = {isa = PBXBuildFile; fileRef = 5B7EBDA9207EAD1600E5049C /* DVGenerics.h */; };
+		5B7EBDAC207EADAF00E5049C /* DVDefer.h in Headers */ = {isa = PBXBuildFile; fileRef = 5B7EBDAB207EADAF00E5049C /* DVDefer.h */; };
+		5B7EBDAD207EADC000E5049C /* AutoVarLet.h in Headers */ = {isa = PBXBuildFile; fileRef = 5B7EBDA7207EAA3200E5049C /* AutoVarLet.h */; };
+		5B7EBDAE207EADC000E5049C /* DVFastEnumeration.h in Headers */ = {isa = PBXBuildFile; fileRef = 5B7EBDA8207EAB3800E5049C /* DVFastEnumeration.h */; };
+		5B7EBDB0207EAE6400E5049C /* DVKeypaths.h in Headers */ = {isa = PBXBuildFile; fileRef = 5B7EBDAF207EAE6400E5049C /* DVKeypaths.h */; };
+		5B7EBDB4207EB24900E5049C /* AutoVarLetTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B7EBDB3207EB24900E5049C /* AutoVarLetTests.m */; };
+		5B7EBDB6207EB4FD00E5049C /* FastEnumerationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B7EBDB5207EB4FD00E5049C /* FastEnumerationTests.m */; };
+		5B7EBDB8207EBB5600E5049C /* DVDeferTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B7EBDB7207EBB5600E5049C /* DVDeferTests.m */; };
+		5B7EBDBA207EC73B00E5049C /* KeypathTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B7EBDB9207EC73B00E5049C /* KeypathTests.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,8 +35,16 @@
 		5B7EBD90207EA79A00E5049C /* CommonCode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommonCode.h; sourceTree = "<group>"; };
 		5B7EBD91207EA79A00E5049C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5B7EBD96207EA79A00E5049C /* CommonCodeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CommonCodeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		5B7EBD9B207EA79A00E5049C /* CommonCodeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CommonCodeTests.m; sourceTree = "<group>"; };
 		5B7EBD9D207EA79A00E5049C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5B7EBDA7207EAA3200E5049C /* AutoVarLet.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AutoVarLet.h; sourceTree = "<group>"; };
+		5B7EBDA8207EAB3800E5049C /* DVFastEnumeration.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DVFastEnumeration.h; sourceTree = "<group>"; };
+		5B7EBDA9207EAD1600E5049C /* DVGenerics.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DVGenerics.h; sourceTree = "<group>"; };
+		5B7EBDAB207EADAF00E5049C /* DVDefer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DVDefer.h; sourceTree = "<group>"; };
+		5B7EBDAF207EAE6400E5049C /* DVKeypaths.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DVKeypaths.h; sourceTree = "<group>"; };
+		5B7EBDB3207EB24900E5049C /* AutoVarLetTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AutoVarLetTests.m; sourceTree = "<group>"; };
+		5B7EBDB5207EB4FD00E5049C /* FastEnumerationTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FastEnumerationTests.m; sourceTree = "<group>"; };
+		5B7EBDB7207EBB5600E5049C /* DVDeferTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DVDeferTests.m; sourceTree = "<group>"; };
+		5B7EBDB9207EC73B00E5049C /* KeypathTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KeypathTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,8 +87,14 @@
 		5B7EBD8F207EA79A00E5049C /* CommonCode */ = {
 			isa = PBXGroup;
 			children = (
+				5B7EBDBF207ECF0A00E5049C /* Audio */,
 				5B7EBD90207EA79A00E5049C /* CommonCode.h */,
 				5B7EBD91207EA79A00E5049C /* Info.plist */,
+				5B7EBDA7207EAA3200E5049C /* AutoVarLet.h */,
+				5B7EBDA8207EAB3800E5049C /* DVFastEnumeration.h */,
+				5B7EBDA9207EAD1600E5049C /* DVGenerics.h */,
+				5B7EBDAB207EADAF00E5049C /* DVDefer.h */,
+				5B7EBDAF207EAE6400E5049C /* DVKeypaths.h */,
 			);
 			path = CommonCode;
 			sourceTree = "<group>";
@@ -80,10 +102,20 @@
 		5B7EBD9A207EA79A00E5049C /* CommonCodeTests */ = {
 			isa = PBXGroup;
 			children = (
-				5B7EBD9B207EA79A00E5049C /* CommonCodeTests.m */,
 				5B7EBD9D207EA79A00E5049C /* Info.plist */,
+				5B7EBDB3207EB24900E5049C /* AutoVarLetTests.m */,
+				5B7EBDB5207EB4FD00E5049C /* FastEnumerationTests.m */,
+				5B7EBDB7207EBB5600E5049C /* DVDeferTests.m */,
+				5B7EBDB9207EC73B00E5049C /* KeypathTests.m */,
 			);
 			path = CommonCodeTests;
+			sourceTree = "<group>";
+		};
+		5B7EBDBF207ECF0A00E5049C /* Audio */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Audio;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -93,7 +125,12 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5B7EBDAE207EADC000E5049C /* DVFastEnumeration.h in Headers */,
+				5B7EBDAC207EADAF00E5049C /* DVDefer.h in Headers */,
+				5B7EBDAD207EADC000E5049C /* AutoVarLet.h in Headers */,
+				5B7EBDAA207EAD1600E5049C /* DVGenerics.h in Headers */,
 				5B7EBD9E207EA79A00E5049C /* CommonCode.h in Headers */,
+				5B7EBDB0207EAE6400E5049C /* DVKeypaths.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -200,7 +237,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5B7EBD9C207EA79A00E5049C /* CommonCodeTests.m in Sources */,
+				5B7EBDB8207EBB5600E5049C /* DVDeferTests.m in Sources */,
+				5B7EBDB6207EB4FD00E5049C /* FastEnumerationTests.m in Sources */,
+				5B7EBDB4207EB24900E5049C /* AutoVarLetTests.m in Sources */,
+				5B7EBDBA207EC73B00E5049C /* KeypathTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
