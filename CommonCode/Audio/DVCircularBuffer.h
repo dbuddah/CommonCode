@@ -13,11 +13,12 @@
 
 -(id)initWithCapacity:(NSUInteger)byteCapacity NS_DESIGNATED_INITIALIZER;
 
--(NSUInteger)writeBytes:(void const * const)bytes length:(NSUInteger)length;
--(NSUInteger)readBytes:(void * const)bytes length:(NSUInteger)length;
--(void)resetBuffer;
+-(NSUInteger)write:(void const * const)bytes length:(NSUInteger)length;
+-(NSUInteger)read:(void * const)bytes length:(NSUInteger)length;
+-(void)reset;
 
-@property (atomic, readonly) NSUInteger availableBytes;
+@property (atomic, readonly) NSUInteger bytesAvailableToRead;
+@property (atomic, readonly) NSUInteger bytesAvailableToWrite;
 
 
 @end

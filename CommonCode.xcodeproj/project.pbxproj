@@ -21,6 +21,9 @@
 		5B7EBDC2207ED36900E5049C /* DVCircularBuffer.h in Headers */ = {isa = PBXBuildFile; fileRef = 5B7EBDC0207ED36900E5049C /* DVCircularBuffer.h */; };
 		5B7EBDC3207ED36900E5049C /* DVCircularBuffer.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B7EBDC1207ED36900E5049C /* DVCircularBuffer.m */; };
 		5B7EBDC6207ED99600E5049C /* CircularBufferTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B7EBDC5207ED99600E5049C /* CircularBufferTests.m */; };
+		5BB42E66207F31A100230C21 /* TPCircularBuffer.h in Headers */ = {isa = PBXBuildFile; fileRef = 5BB42E64207F31A100230C21 /* TPCircularBuffer.h */; };
+		5BB42E67207F31A100230C21 /* TPCircularBuffer.c in Sources */ = {isa = PBXBuildFile; fileRef = 5BB42E65207F31A100230C21 /* TPCircularBuffer.c */; };
+		5BB42E69207F324600230C21 /* TPCircualrBufferTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BB42E68207F324600230C21 /* TPCircualrBufferTests.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +54,9 @@
 		5B7EBDC0207ED36900E5049C /* DVCircularBuffer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DVCircularBuffer.h; sourceTree = "<group>"; };
 		5B7EBDC1207ED36900E5049C /* DVCircularBuffer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DVCircularBuffer.m; sourceTree = "<group>"; };
 		5B7EBDC5207ED99600E5049C /* CircularBufferTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CircularBufferTests.m; sourceTree = "<group>"; };
+		5BB42E64207F31A100230C21 /* TPCircularBuffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPCircularBuffer.h; sourceTree = "<group>"; };
+		5BB42E65207F31A100230C21 /* TPCircularBuffer.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = TPCircularBuffer.c; sourceTree = "<group>"; };
+		5BB42E68207F324600230C21 /* TPCircualrBufferTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TPCircualrBufferTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +129,8 @@
 			children = (
 				5B7EBDC0207ED36900E5049C /* DVCircularBuffer.h */,
 				5B7EBDC1207ED36900E5049C /* DVCircularBuffer.m */,
+				5BB42E65207F31A100230C21 /* TPCircularBuffer.c */,
+				5BB42E64207F31A100230C21 /* TPCircularBuffer.h */,
 			);
 			path = Audio;
 			sourceTree = "<group>";
@@ -131,6 +139,7 @@
 			isa = PBXGroup;
 			children = (
 				5B7EBDC5207ED99600E5049C /* CircularBufferTests.m */,
+				5BB42E68207F324600230C21 /* TPCircualrBufferTests.m */,
 			);
 			path = AudioTests;
 			sourceTree = "<group>";
@@ -145,6 +154,7 @@
 				5B7EBDC2207ED36900E5049C /* DVCircularBuffer.h in Headers */,
 				5B7EBDAE207EADC000E5049C /* DVFastEnumeration.h in Headers */,
 				5B7EBDAC207EADAF00E5049C /* DVDefer.h in Headers */,
+				5BB42E66207F31A100230C21 /* TPCircularBuffer.h in Headers */,
 				5B7EBDAD207EADC000E5049C /* AutoVarLet.h in Headers */,
 				5B7EBDAA207EAD1600E5049C /* DVGenerics.h in Headers */,
 				5B7EBD9E207EA79A00E5049C /* CommonCode.h in Headers */,
@@ -248,6 +258,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5BB42E67207F31A100230C21 /* TPCircularBuffer.c in Sources */,
 				5B7EBDC3207ED36900E5049C /* DVCircularBuffer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -256,6 +267,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5BB42E69207F324600230C21 /* TPCircualrBufferTests.m in Sources */,
 				5B7EBDB8207EBB5600E5049C /* DVDeferTests.m in Sources */,
 				5B7EBDB6207EB4FD00E5049C /* FastEnumerationTests.m in Sources */,
 				5B7EBDB4207EB24900E5049C /* AutoVarLetTests.m in Sources */,

@@ -8,83 +8,78 @@
 
 #import "DVCircularBuffer.h"
 #import "AutoVarLet.h"
+#import "TPCircularBuffer.h"
 
 @interface DVCircularBuffer()
 {
-    char *internalByteBuffer;
-    NSUInteger capacity;
-    char * readPointer;
-    char * writePointer;
+    TPCircularBuffer buffer;
 }
 @end
 
 @implementation DVCircularBuffer
 
--(id)initWithCapacity:(NSUInteger)byteCapacity
+-(instancetype)init
+{
+    NSAssert(nil, @"[DVCircularBuffer init] is not to be used. Call [DVCircularBuffer initWithCapacity:] instead");
+    return [self initWithCapacity:0];
+}
+
+-(instancetype)initWithCapacity:(NSUInteger)requestedCapacity
 {
     if (self = [super init])
     {
-        internalByteBuffer = malloc(byteCapacity);
-        if (internalByteBuffer != nil){
-            readPointer = internalByteBuffer;
-            writePointer = internalByteBuffer;
-            capacity = byteCapacity;
+        if (requestedCapacity == 0) {
+            return nil;
         }
-        else
-            self = nil;
-        
+        TPCircularBufferInit(&buffer, (uint32_t)requestedCapacity);
+     
     }
     return self;
 }
 
--(NSUInteger)writeBytes:(void const * const)bytes length:(NSUInteger)length
+-(NSUInteger)write:(void const * const)bytes length:(NSUInteger)length
 {
-    var numBytesToWrite = length;
-    
-    let availableBytes = [self availableBytes];
-    
-    if (numBytesToWrite > availableBytes) numBytesToWrite = availableBytes;
-    
-    
-    
-    let endOfBuffer = internalByteBuffer + capacity;
-    
-    let bytesToEnd = [self writeAheadOfRead] ? endOfBuffer - writePointer : 0;
-    
-    return numBytesToWrite;
+    var numAvailableBytes = 0u;
+    TPCircularBufferHead(&buffer, &numAvailableBytes);
+    numAvailableBytes = MIN(numAvailableBytes, length);
+    TPCircularBufferProduceBytes(&buffer, bytes, numAvailableBytes);
+    return numAvailableBytes;
 }
 
 
--(NSUInteger)readBytes:(void * const)bytes length:(NSUInteger)length
+-(NSUInteger)read:(void * const)bytes length:(NSUInteger)length
 {
-    NSUInteger numBytesRead = 0;
-    
-    return numBytesRead;
+    var numAvailableBytes = 0u;
+    let tail = TPCircularBufferTail(&buffer, &numAvailableBytes);
+    numAvailableBytes = MIN(numAvailableBytes, length);
+    memcpy(bytes, tail, numAvailableBytes);
+    TPCircularBufferConsume(&buffer, numAvailableBytes);
+    return numAvailableBytes;
 }
 
 
--(void)resetBuffer
+-(void)reset
 {
-    
+    TPCircularBufferClear(&buffer);
 }
 
--(NSUInteger)availableBytes
+-(void)dealloc
 {
-    NSUInteger availableBytes = 0;
-    if (self.writeAheadOfRead)
-    {
-        availableBytes = writePointer - readPointer;
-    }
-    else
-    {
-        availableBytes = capacity - (readPointer - writePointer);
-    }
-    return availableBytes;
+    TPCircularBufferCleanup(&buffer);
 }
-        
--(BOOL)writeAheadOfRead
+
+-(NSUInteger)bytesAvailableToWrite
 {
-    return writePointer >= readPointer;
+    var numAvailableBytes = 0u;
+    TPCircularBufferHead(&buffer, &numAvailableBytes);
+    return numAvailableBytes;
+}
+
+-(NSUInteger)bytesAvailableToRead
+{
+    var numAvailableBytes = 0u;
+    TPCircularBufferTail(&buffer, &numAvailableBytes);
+    return numAvailableBytes;
 }
 
 
