@@ -32,10 +32,24 @@
     // defer block must be placed before the return statement
     dv_defer{
         // the defer block will be called when the enclosing block loses scope
-        [string appendString:@"defer append"];
+        [string appendString:@"defer A-> "];
     };
+    
+    dv_defer{
+        // the defer block will be called when the enclosing block loses scope
+        [string appendString:@"defer B-> "];
+    };
+    
+    {
+        dv_defer{
+            // the defer block will be called when the enclosing block loses scope
+            [string appendString:@"defer C-> "];
+        };
+        
 
-    [string appendString:@"first append  "];
+    }
+    
+    [string appendString:@"non-defer D->  "];
     
     return; //  return without executing the next line
     
@@ -48,11 +62,13 @@
     // Use XCTAssert and related functions to verify your tests produce the correct results.
     
     // set up inital string
-    let string = [NSMutableString stringWithString:@"initial  "];
+    let string = [NSMutableString stringWithString:@"initial string->  "];
     
     [self manipulateString:string];
     
-    XCTAssertTrue([string isEqualToString:@"initial  "@"first append  "@"defer append"]);
+    let expectedResult = @"initial string->  defer C-> non-defer D->  defer B-> defer A-> ";
+    
+    XCTAssertTrue([string isEqualToString:expectedResult]);
 
 
 }
