@@ -41,7 +41,7 @@
 {
     var numAvailableBytes = 0u;
     TPCircularBufferHead(&buffer, &numAvailableBytes);
-    numAvailableBytes = MIN(numAvailableBytes, length);
+    numAvailableBytes = MIN(numAvailableBytes, (typeof(numAvailableBytes))length);
     TPCircularBufferProduceBytes(&buffer, bytes, numAvailableBytes);
     return numAvailableBytes;
 }
@@ -51,7 +51,7 @@
 {
     var numAvailableBytes = 0u;
     let tail = TPCircularBufferTail(&buffer, &numAvailableBytes);
-    numAvailableBytes = MIN(numAvailableBytes, length);
+    numAvailableBytes = MIN(numAvailableBytes, (typeof(numAvailableBytes))length);
     memcpy(bytes, tail, numAvailableBytes);
     TPCircularBufferConsume(&buffer, numAvailableBytes);
     return numAvailableBytes;
