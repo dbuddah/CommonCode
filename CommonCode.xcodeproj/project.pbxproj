@@ -18,6 +18,9 @@
 		5B7EBDB6207EB4FD00E5049C /* FastEnumerationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B7EBDB5207EB4FD00E5049C /* FastEnumerationTests.m */; };
 		5B7EBDB8207EBB5600E5049C /* DVDeferTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B7EBDB7207EBB5600E5049C /* DVDeferTests.m */; };
 		5B7EBDBA207EC73B00E5049C /* KeypathTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B7EBDB9207EC73B00E5049C /* KeypathTests.m */; };
+		5B7EBDC2207ED36900E5049C /* DVCircularBuffer.h in Headers */ = {isa = PBXBuildFile; fileRef = 5B7EBDC0207ED36900E5049C /* DVCircularBuffer.h */; };
+		5B7EBDC3207ED36900E5049C /* DVCircularBuffer.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B7EBDC1207ED36900E5049C /* DVCircularBuffer.m */; };
+		5B7EBDC6207ED99600E5049C /* CircularBufferTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B7EBDC5207ED99600E5049C /* CircularBufferTests.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +48,9 @@
 		5B7EBDB5207EB4FD00E5049C /* FastEnumerationTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FastEnumerationTests.m; sourceTree = "<group>"; };
 		5B7EBDB7207EBB5600E5049C /* DVDeferTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DVDeferTests.m; sourceTree = "<group>"; };
 		5B7EBDB9207EC73B00E5049C /* KeypathTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KeypathTests.m; sourceTree = "<group>"; };
+		5B7EBDC0207ED36900E5049C /* DVCircularBuffer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DVCircularBuffer.h; sourceTree = "<group>"; };
+		5B7EBDC1207ED36900E5049C /* DVCircularBuffer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DVCircularBuffer.m; sourceTree = "<group>"; };
+		5B7EBDC5207ED99600E5049C /* CircularBufferTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CircularBufferTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +108,7 @@
 		5B7EBD9A207EA79A00E5049C /* CommonCodeTests */ = {
 			isa = PBXGroup;
 			children = (
+				5B7EBDC4207ED97700E5049C /* AudioTests */,
 				5B7EBD9D207EA79A00E5049C /* Info.plist */,
 				5B7EBDB3207EB24900E5049C /* AutoVarLetTests.m */,
 				5B7EBDB5207EB4FD00E5049C /* FastEnumerationTests.m */,
@@ -114,8 +121,18 @@
 		5B7EBDBF207ECF0A00E5049C /* Audio */ = {
 			isa = PBXGroup;
 			children = (
+				5B7EBDC0207ED36900E5049C /* DVCircularBuffer.h */,
+				5B7EBDC1207ED36900E5049C /* DVCircularBuffer.m */,
 			);
 			path = Audio;
+			sourceTree = "<group>";
+		};
+		5B7EBDC4207ED97700E5049C /* AudioTests */ = {
+			isa = PBXGroup;
+			children = (
+				5B7EBDC5207ED99600E5049C /* CircularBufferTests.m */,
+			);
+			path = AudioTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,6 +142,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5B7EBDC2207ED36900E5049C /* DVCircularBuffer.h in Headers */,
 				5B7EBDAE207EADC000E5049C /* DVFastEnumeration.h in Headers */,
 				5B7EBDAC207EADAF00E5049C /* DVDefer.h in Headers */,
 				5B7EBDAD207EADC000E5049C /* AutoVarLet.h in Headers */,
@@ -230,6 +248,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5B7EBDC3207ED36900E5049C /* DVCircularBuffer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -240,6 +259,7 @@
 				5B7EBDB8207EBB5600E5049C /* DVDeferTests.m in Sources */,
 				5B7EBDB6207EB4FD00E5049C /* FastEnumerationTests.m in Sources */,
 				5B7EBDB4207EB24900E5049C /* AutoVarLetTests.m in Sources */,
+				5B7EBDC6207ED99600E5049C /* CircularBufferTests.m in Sources */,
 				5B7EBDBA207EC73B00E5049C /* KeypathTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
