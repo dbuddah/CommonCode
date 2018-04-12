@@ -99,14 +99,10 @@
 		5B7EBD8F207EA79A00E5049C /* CommonCode */ = {
 			isa = PBXGroup;
 			children = (
+				5BB42E6A207F49A600230C21 /* Swifty Objc */,
 				5B7EBDBF207ECF0A00E5049C /* Audio */,
 				5B7EBD90207EA79A00E5049C /* CommonCode.h */,
 				5B7EBD91207EA79A00E5049C /* Info.plist */,
-				5B7EBDA7207EAA3200E5049C /* AutoVarLet.h */,
-				5B7EBDA8207EAB3800E5049C /* DVFastEnumeration.h */,
-				5B7EBDA9207EAD1600E5049C /* DVGenerics.h */,
-				5B7EBDAB207EADAF00E5049C /* DVDefer.h */,
-				5B7EBDAF207EAE6400E5049C /* DVKeypaths.h */,
 			);
 			path = CommonCode;
 			sourceTree = "<group>";
@@ -114,12 +110,9 @@
 		5B7EBD9A207EA79A00E5049C /* CommonCodeTests */ = {
 			isa = PBXGroup;
 			children = (
+				5BB42E6B207F4A1600230C21 /* Swifty Objc Tests */,
 				5B7EBDC4207ED97700E5049C /* AudioTests */,
 				5B7EBD9D207EA79A00E5049C /* Info.plist */,
-				5B7EBDB3207EB24900E5049C /* AutoVarLetTests.m */,
-				5B7EBDB5207EB4FD00E5049C /* FastEnumerationTests.m */,
-				5B7EBDB7207EBB5600E5049C /* DVDeferTests.m */,
-				5B7EBDB9207EC73B00E5049C /* KeypathTests.m */,
 			);
 			path = CommonCodeTests;
 			sourceTree = "<group>";
@@ -142,6 +135,29 @@
 				5BB42E68207F324600230C21 /* TPCircualrBufferTests.m */,
 			);
 			path = AudioTests;
+			sourceTree = "<group>";
+		};
+		5BB42E6A207F49A600230C21 /* Swifty Objc */ = {
+			isa = PBXGroup;
+			children = (
+				5B7EBDA7207EAA3200E5049C /* AutoVarLet.h */,
+				5B7EBDA8207EAB3800E5049C /* DVFastEnumeration.h */,
+				5B7EBDA9207EAD1600E5049C /* DVGenerics.h */,
+				5B7EBDAB207EADAF00E5049C /* DVDefer.h */,
+				5B7EBDAF207EAE6400E5049C /* DVKeypaths.h */,
+			);
+			path = "Swifty Objc";
+			sourceTree = "<group>";
+		};
+		5BB42E6B207F4A1600230C21 /* Swifty Objc Tests */ = {
+			isa = PBXGroup;
+			children = (
+				5B7EBDB3207EB24900E5049C /* AutoVarLetTests.m */,
+				5B7EBDB5207EB4FD00E5049C /* FastEnumerationTests.m */,
+				5B7EBDB7207EBB5600E5049C /* DVDeferTests.m */,
+				5B7EBDB9207EC73B00E5049C /* KeypathTests.m */,
+			);
+			path = "Swifty Objc Tests";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
