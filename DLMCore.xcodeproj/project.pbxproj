@@ -11,7 +11,7 @@
 		5B7EBD9E207EA79A00E5049C /* DLMCore.h in Headers */ = {isa = PBXBuildFile; fileRef = 5B7EBD90207EA79A00E5049C /* DLMCore.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5B7EBDAA207EAD1600E5049C /* DLMGenerics.h in Headers */ = {isa = PBXBuildFile; fileRef = 5B7EBDA9207EAD1600E5049C /* DLMGenerics.h */; };
 		5B7EBDAC207EADAF00E5049C /* DLMDefer.h in Headers */ = {isa = PBXBuildFile; fileRef = 5B7EBDAB207EADAF00E5049C /* DLMDefer.h */; };
-		5B7EBDAD207EADC000E5049C /* AutoVarLet.h in Headers */ = {isa = PBXBuildFile; fileRef = 5B7EBDA7207EAA3200E5049C /* AutoVarLet.h */; };
+		5B7EBDAD207EADC000E5049C /* DLMAutoVarLet.h in Headers */ = {isa = PBXBuildFile; fileRef = 5B7EBDA7207EAA3200E5049C /* DLMAutoVarLet.h */; };
 		5B7EBDAE207EADC000E5049C /* DLMFastEnumeration.h in Headers */ = {isa = PBXBuildFile; fileRef = 5B7EBDA8207EAB3800E5049C /* DLMFastEnumeration.h */; };
 		5B7EBDB0207EAE6400E5049C /* DLMKeypaths.h in Headers */ = {isa = PBXBuildFile; fileRef = 5B7EBDAF207EAE6400E5049C /* DLMKeypaths.h */; };
 		5B7EBDB4207EB24900E5049C /* AutoVarLetTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B7EBDB3207EB24900E5049C /* AutoVarLetTests.m */; };
@@ -42,7 +42,7 @@
 		5B7EBD91207EA79A00E5049C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5B7EBD96207EA79A00E5049C /* DLMCoreTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DLMCoreTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B7EBD9D207EA79A00E5049C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5B7EBDA7207EAA3200E5049C /* AutoVarLet.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AutoVarLet.h; sourceTree = "<group>"; };
+		5B7EBDA7207EAA3200E5049C /* DLMAutoVarLet.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DLMAutoVarLet.h; sourceTree = "<group>"; };
 		5B7EBDA8207EAB3800E5049C /* DLMFastEnumeration.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DLMFastEnumeration.h; sourceTree = "<group>"; };
 		5B7EBDA9207EAD1600E5049C /* DLMGenerics.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DLMGenerics.h; sourceTree = "<group>"; };
 		5B7EBDAB207EADAF00E5049C /* DLMDefer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DLMDefer.h; sourceTree = "<group>"; };
@@ -57,6 +57,7 @@
 		5BB42E64207F31A100230C21 /* TPCircularBuffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPCircularBuffer.h; sourceTree = "<group>"; };
 		5BB42E65207F31A100230C21 /* TPCircularBuffer.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = TPCircularBuffer.c; sourceTree = "<group>"; };
 		5BB42E68207F324600230C21 /* TPCircualrBufferTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TPCircualrBufferTests.m; sourceTree = "<group>"; };
+		5BB42E6D20819A0D00230C21 /* DLMCore.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = DLMCore.podspec; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +100,7 @@
 		5B7EBD8F207EA79A00E5049C /* DLMCore */ = {
 			isa = PBXGroup;
 			children = (
+				5BB42E6D20819A0D00230C21 /* DLMCore.podspec */,
 				5BB42E6A207F49A600230C21 /* Swifty Objc */,
 				5B7EBDBF207ECF0A00E5049C /* Audio */,
 				5B7EBD90207EA79A00E5049C /* DLMCore.h */,
@@ -140,7 +142,7 @@
 		5BB42E6A207F49A600230C21 /* Swifty Objc */ = {
 			isa = PBXGroup;
 			children = (
-				5B7EBDA7207EAA3200E5049C /* AutoVarLet.h */,
+				5B7EBDA7207EAA3200E5049C /* DLMAutoVarLet.h */,
 				5B7EBDA8207EAB3800E5049C /* DLMFastEnumeration.h */,
 				5B7EBDA9207EAD1600E5049C /* DLMGenerics.h */,
 				5B7EBDAB207EADAF00E5049C /* DLMDefer.h */,
@@ -171,7 +173,7 @@
 				5B7EBDAE207EADC000E5049C /* DLMFastEnumeration.h in Headers */,
 				5B7EBDAC207EADAF00E5049C /* DLMDefer.h in Headers */,
 				5BB42E66207F31A100230C21 /* TPCircularBuffer.h in Headers */,
-				5B7EBDAD207EADC000E5049C /* AutoVarLet.h in Headers */,
+				5B7EBDAD207EADC000E5049C /* DLMAutoVarLet.h in Headers */,
 				5B7EBDAA207EAD1600E5049C /* DLMGenerics.h in Headers */,
 				5B7EBD9E207EA79A00E5049C /* DLMCore.h in Headers */,
 				5B7EBDB0207EAE6400E5049C /* DLMKeypaths.h in Headers */,

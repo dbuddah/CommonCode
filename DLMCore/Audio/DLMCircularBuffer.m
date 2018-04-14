@@ -7,7 +7,7 @@
 //
 
 #import "DLMCircularBuffer.h"
-#import "AutoVarLet.h"
+#import "DLMAutoVarLet.h"
 #import "TPCircularBuffer.h"
 
 @interface DLMCircularBuffer()

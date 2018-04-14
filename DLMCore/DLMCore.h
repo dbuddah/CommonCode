@@ -16,4 +16,11 @@ FOUNDATION_EXPORT const unsigned char DLMCoreVersionString[];
 
 // In this header, you should import all the public headers of your framework using statements like #import <DLMCore/PublicHeader.h>
 
+#import "DLMCircularBuffer.h"
+#import "DLMAutoVarLet.h"
+#import "DLMFastEnumeration.h"
+#import "DLMGenerics.h"
+#import "DLMDefer.h"
+#import "DLMKeypaths.h"
+
 

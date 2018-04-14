@@ -1,5 +1,5 @@
 //
-//  AutoVarLet.h
+//  DLMAutoVarLet.h
 //  DLMCore
 //
 //  Created by Doug Mccoy on 4/11/18.
@@ -7,8 +7,8 @@
 //
 
 
-#ifndef AutoVarLet_h
-#define AutoVarLet_h
+#ifndef DLMAutoVarLet_h
+#define DLMAutoVarLet_h
 
 // taken from https://pspdfkit.com/blog/2017/even-swiftier-objective-c/
 #if defined(__cplusplus)
@@ -25,4 +25,4 @@
 
 
 
-#endif /* AutoVarLet_h */
+#endif /* DLMAutoVarLet_h */

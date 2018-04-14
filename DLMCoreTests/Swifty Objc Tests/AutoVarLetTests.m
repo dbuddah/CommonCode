@@ -1,5 +1,5 @@
 //
-//  AutoVarLetTests.m
+//  DLMAutoVarLetTests.m
 //  DLMCoreTests
 //
 //  Created by Doug Mccoy on 4/11/18.
@@ -7,13 +7,13 @@
 //
 
 #import <XCTest/XCTest.h>
-#import "AutoVarLet.h"
+#import "DLMAutoVarLet.h"
 
-@interface AutoVarLetTests : XCTestCase
+@interface DLMAutoVarLetTests : XCTestCase
 
 @end
 
-@implementation AutoVarLetTests
+@implementation DLMAutoVarLetTests
 
 - (void)setUp {
     [super setUp];
@@ -25,7 +25,7 @@
     [super tearDown];
 }
 
-- (void)testAutoVarLet {
+- (void)testDLMAutoVarLet {
     // This is an example of a functional test case.
     // Use XCTAssert and related functions to verify your tests produce the correct results.
     

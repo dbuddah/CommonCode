@@ -7,7 +7,7 @@
 //
 
 #import <XCTest/XCTest.h>
-#import "AutoVarLet.h"
+#import "DLMAutoVarLet.h"
 #import "DLMKeypaths.h"
 
 @interface KeypathTests : XCTestCase

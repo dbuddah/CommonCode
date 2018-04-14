@@ -8,7 +8,7 @@
 
 #import <XCTest/XCTest.h>
 #import "DLMFastEnumeration.h"
-#import "AutoVarLet.h"
+#import "DLMAutoVarLet.h"
 @interface FastEnumerationTests : XCTestCase
 
 @end

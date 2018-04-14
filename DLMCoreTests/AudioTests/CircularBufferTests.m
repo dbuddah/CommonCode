@@ -8,7 +8,7 @@
 
 #import <XCTest/XCTest.h>
 #import "DLMCircularBuffer.h"
-#import "AutoVarLet.h"
+#import "DLMAutoVarLet.h"
 
 @interface CircularBufferTests : XCTestCase
 
