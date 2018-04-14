@@ -1,20 +1,20 @@
 //
-//  KeypathTests.m
-//  CommonCodeTests
+//  TPCircualrBufferTests.m
+//  DLMCoreTests
 //
 //  Created by Doug Mccoy on 4/11/18.
 //  Copyright © 2018 doogilasovich. All rights reserved.
 //
 
 #import <XCTest/XCTest.h>
+#import "TPCircularBuffer.h"
 #import "AutoVarLet.h"
-#import "DVKeypaths.h"
 
-@interface KeypathTests : XCTestCase
+@interface TPCircualrBufferTests : XCTestCase
 
 @end
 
-@implementation KeypathTests
+@implementation TPCircualrBufferTests
 
 - (void)setUp {
     [super setUp];
@@ -29,21 +29,23 @@
 - (void)testExample {
     // This is an example of a functional test case.
     // Use XCTAssert and related functions to verify your tests produce the correct results.
+    TPCircularBuffer buffer;
+    TPCircularBufferInit(&buffer, 10);
     
-    let array = @[@"string", @"asdfasdf"];
+    let input = "ABCDEFGHIJKL";
+    TPCircularBufferProduceBytes(&buffer, input, 3);
+    var availableBytes = 0u;
+    let tail = TPCircularBufferTail(&buffer, &availableBytes);
+    char output[30];
+    memset(output, 0, 30);
+    memcpy(output, tail, availableBytes);
+    TPCircularBufferConsume(&buffer, availableBytes);
+    let compare = strcmp(output, "ABC");
+    XCTAssertEqual(compare, 0);
     
-    let arrayCountKeypath = DV_KEYPATH(array, count);    
-    XCTAssertTrue([arrayCountKeypath isEqualToString:@"count"]);
     
-    let descriptionLength = DV_KEYPATH(array, description.length);
-    XCTAssertTrue([descriptionLength isEqualToString:@"description.length"]);
     
-    // uncomment the next line to see compile time check of incorrect keypath (if DEBUG is defined)
-    // Property 'count' not found on object of type 'id _Nullable'
-    // let notARealKeypath = DV_KEYPATH(array, firstObject.count);
-
     
-
 }
 
 - (void)testPerformanceExample {

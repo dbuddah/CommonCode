@@ -1,6 +1,6 @@
 //
 //  CircularBufferTests.m
-//  CommonCodeTests
+//  DLMCoreTests
 //
 //  Created by Doug Mccoy on 4/11/18.
 //  Copyright © 2018 doogilasovich. All rights reserved.

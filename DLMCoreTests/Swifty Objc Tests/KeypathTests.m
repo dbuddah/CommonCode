@@ -1,6 +1,6 @@
 //
-//  AutoVarLetTests.m
-//  CommonCodeTests
+//  KeypathTests.m
+//  DLMCoreTests
 //
 //  Created by Doug Mccoy on 4/11/18.
 //  Copyright © 2018 doogilasovich. All rights reserved.
@@ -8,12 +8,13 @@
 
 #import <XCTest/XCTest.h>
 #import "AutoVarLet.h"
+#import "DVKeypaths.h"
 
-@interface AutoVarLetTests : XCTestCase
+@interface KeypathTests : XCTestCase
 
 @end
 
-@implementation AutoVarLetTests
+@implementation KeypathTests
 
 - (void)setUp {
     [super setUp];
@@ -25,27 +26,24 @@
     [super tearDown];
 }
 
-- (void)testAutoVarLet {
+- (void)testExample {
     // This is an example of a functional test case.
     // Use XCTAssert and related functions to verify your tests produce the correct results.
     
-    // create a const NSString
-    let constString = @"const string";
-    XCTAssertTrue([constString isKindOfClass:[NSString class]]);
-    XCTAssertTrue([constString isEqualToString:@"const string"]);
+    let array = @[@"string", @"asdfasdf"];
     
-    // uncomment the next line to see compile error when reassigning const value
-    // constString = @"other";
+    let arrayCountKeypath = DV_KEYPATH(array, count);    
+    XCTAssertTrue([arrayCountKeypath isEqualToString:@"count"]);
     
-    // create a non-const NSString
-    var nonConstString = @"non-const string";
-    XCTAssertTrue([nonConstString isKindOfClass:[NSString class]]);
-    XCTAssertEqual(nonConstString, @"non-const string");
+    let descriptionLength = DV_KEYPATH(array, description.length);
+    XCTAssertTrue([descriptionLength isEqualToString:@"description.length"]);
     
-    // No compile error when reassigning non-const value
-     nonConstString = @"other";
+    // uncomment the next line to see compile time check of incorrect keypath (if DEBUG is defined)
+    // Property 'count' not found on object of type 'id _Nullable'
+    // let notARealKeypath = DV_KEYPATH(array, firstObject.count);
+
     
-    
+
 }
 
 - (void)testPerformanceExample {

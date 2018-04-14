@@ -1,20 +1,19 @@
 //
-//  TPCircualrBufferTests.m
-//  CommonCodeTests
+//  AutoVarLetTests.m
+//  DLMCoreTests
 //
 //  Created by Doug Mccoy on 4/11/18.
 //  Copyright © 2018 doogilasovich. All rights reserved.
 //
 
 #import <XCTest/XCTest.h>
-#import "TPCircularBuffer.h"
 #import "AutoVarLet.h"
 
-@interface TPCircualrBufferTests : XCTestCase
+@interface AutoVarLetTests : XCTestCase
 
 @end
 
-@implementation TPCircualrBufferTests
+@implementation AutoVarLetTests
 
 - (void)setUp {
     [super setUp];
@@ -26,24 +25,25 @@
     [super tearDown];
 }
 
-- (void)testExample {
+- (void)testAutoVarLet {
     // This is an example of a functional test case.
     // Use XCTAssert and related functions to verify your tests produce the correct results.
-    TPCircularBuffer buffer;
-    TPCircularBufferInit(&buffer, 10);
     
-    let input = "ABCDEFGHIJKL";
-    TPCircularBufferProduceBytes(&buffer, input, 3);
-    var availableBytes = 0u;
-    let tail = TPCircularBufferTail(&buffer, &availableBytes);
-    char output[30];
-    memset(output, 0, 30);
-    memcpy(output, tail, availableBytes);
-    TPCircularBufferConsume(&buffer, availableBytes);
-    let compare = strcmp(output, "ABC");
-    XCTAssertEqual(compare, 0);
+    // create a const NSString
+    let constString = @"const string";
+    XCTAssertTrue([constString isKindOfClass:[NSString class]]);
+    XCTAssertTrue([constString isEqualToString:@"const string"]);
     
+    // uncomment the next line to see compile error when reassigning const value
+    // constString = @"other";
     
+    // create a non-const NSString
+    var nonConstString = @"non-const string";
+    XCTAssertTrue([nonConstString isKindOfClass:[NSString class]]);
+    XCTAssertEqual(nonConstString, @"non-const string");
+    
+    // No compile error when reassigning non-const value
+     nonConstString = @"other";
     
     
 }
