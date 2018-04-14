@@ -1,26 +1,26 @@
 //
-//  DVCircularBuffer.m
+//  DLMCircularBuffer.m
 //  DLMCore
 //
 //  Created by Doug Mccoy on 4/11/18.
 //  Copyright © 2018 doogilasovich. All rights reserved.
 //
 
-#import "DVCircularBuffer.h"
+#import "DLMCircularBuffer.h"
 #import "AutoVarLet.h"
 #import "TPCircularBuffer.h"
 
-@interface DVCircularBuffer()
+@interface DLMCircularBuffer()
 {
     TPCircularBuffer buffer;
 }
 @end
 
-@implementation DVCircularBuffer
+@implementation DLMCircularBuffer
 
 -(instancetype)init
 {
-    NSAssert(nil, @"[DVCircularBuffer init] is not to be used. Call [DVCircularBuffer initWithCapacity:] instead");
+    NSAssert(nil, @"[DLMCircularBuffer init] is not to be used. Call [DLMCircularBuffer initWithCapacity:] instead");
     return [self initWithCapacity:0];
 }
 

@@ -1,5 +1,5 @@
 //
-//  DVCircularBuffer.h
+//  DLMCircularBuffer.h
 //  DLMCore
 //
 //  Created by Doug Mccoy on 4/11/18.
@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface DVCircularBuffer : NSObject
+@interface DLMCircularBuffer : NSObject
 
 
 -(id)initWithCapacity:(NSUInteger)byteCapacity NS_DESIGNATED_INITIALIZER;

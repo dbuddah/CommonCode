@@ -1,5 +1,5 @@
 //
-//  DVDeferTests.m
+//  DLMDeferTests.m
 //  DLMCoreTests
 //
 //  Created by Doug Mccoy on 4/11/18.
@@ -8,13 +8,13 @@
 
 #import <XCTest/XCTest.h>
 #import "AutoVarLet.h"
-#import "DVDefer.h"
+#import "DLMDefer.h"
 
-@interface DVDeferTests : XCTestCase
+@interface DLMDeferTests : XCTestCase
 
 @end
 
-@implementation DVDeferTests
+@implementation DLMDeferTests
 
 - (void)setUp {
     [super setUp];

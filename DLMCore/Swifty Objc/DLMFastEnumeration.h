@@ -1,13 +1,13 @@
 //
-//  DVFastEnumeration.h
+//  DLMFastEnumeration.h
 //  DLMCore
 //
 //  Created by Doug Mccoy on 4/11/18.
 //  Copyright © 2018 doogilasovich. All rights reserved.
 //
 
-#ifndef DVFastEnumeration_h
-#define DVFastEnumeration_h
+#ifndef DLMFastEnumeration_h
+#define DLMFastEnumeration_h
 
 // Taken from https://gist.github.com/steipete/7e3c69b985165dc23c5ec169b857ff42
 //  PSPDFFastEnumeration.h
@@ -21,66 +21,66 @@
 // Notes:
 // Type safe at compile time
 
-@protocol DVFastEnumeration <NSFastEnumeration>
+@protocol DLMFastEnumeration <NSFastEnumeration>
 - (id)dv_enumeratedType;
 @end
 
 // Usage: foreach (s, strings) { ... }
 #define foreach(element, collection) for (typeof((collection).dv_enumeratedType) element in (collection))
 
-@interface NSArray <ElementType> (DVFastEnumeration)
-<DVFastEnumeration>
+@interface NSArray <ElementType> (DLMFastEnumeration)
+<DLMFastEnumeration>
 
 - (ElementType)dv_enumeratedType;
 
 @end
 
-@interface NSSet <ElementType> (DVFastEnumeration)
-<DVFastEnumeration>
+@interface NSSet <ElementType> (DLMFastEnumeration)
+<DLMFastEnumeration>
 
 - (ElementType)dv_enumeratedType;
 
 @end
 
-@interface NSDictionary <KeyType, ValueType> (DVFastEnumeration)
-<DVFastEnumeration>
+@interface NSDictionary <KeyType, ValueType> (DLMFastEnumeration)
+<DLMFastEnumeration>
 
 - (KeyType)dv_enumeratedType;
 
 @end
 
-@interface NSOrderedSet <ElementType> (DVFastEnumeration)
-<DVFastEnumeration>
+@interface NSOrderedSet <ElementType> (DLMFastEnumeration)
+<DLMFastEnumeration>
 
 - (ElementType)dv_enumeratedType;
 
 @end
 
-@interface NSPointerArray (DVFastEnumeration) <DVFastEnumeration>
+@interface NSPointerArray (DLMFastEnumeration) <DLMFastEnumeration>
 
 - (void *)dv_enumeratedType;
 
 @end
 
-@interface NSHashTable <ElementType> (DVFastEnumeration)
-<DVFastEnumeration>
+@interface NSHashTable <ElementType> (DLMFastEnumeration)
+<DLMFastEnumeration>
 
 - (ElementType)dv_enumeratedType;
 
 @end
 
-@interface NSMapTable <KeyType, ValueType> (DVFastEnumeration)
-<DVFastEnumeration>
+@interface NSMapTable <KeyType, ValueType> (DLMFastEnumeration)
+<DLMFastEnumeration>
 
 - (KeyType)dv_enumeratedType;
 
 @end
 
-@interface NSEnumerator <ElementType> (DVFastEnumeration)
-<DVFastEnumeration>
+@interface NSEnumerator <ElementType> (DLMFastEnumeration)
+<DLMFastEnumeration>
 
 - (ElementType)dv_enumeratedType;
 
 @end
 
-#endif /* DVFastEnumeration_h */
+#endif /* DLMFastEnumeration_h */

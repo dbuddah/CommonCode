@@ -7,7 +7,7 @@
 //
 
 #import <XCTest/XCTest.h>
-#import "DVCircularBuffer.h"
+#import "DLMCircularBuffer.h"
 #import "AutoVarLet.h"
 
 @interface CircularBufferTests : XCTestCase
@@ -34,11 +34,11 @@
 
 -(void)testAllocation
 {
-    let bufferFailed = [[DVCircularBuffer alloc] initWithCapacity:0];
+    let bufferFailed = [[DLMCircularBuffer alloc] initWithCapacity:0];
     XCTAssertNil(bufferFailed);
     
     let capacity = 1000;
-    let bufferSuccess = [[DVCircularBuffer alloc] initWithCapacity:capacity];
+    let bufferSuccess = [[DLMCircularBuffer alloc] initWithCapacity:capacity];
     XCTAssertEqual(bufferSuccess.bytesAvailableToRead, 0);
     XCTAssertNotNil(bufferSuccess);
     
@@ -48,7 +48,7 @@
 -(void)testEmpty
 {
     let capacity = 1000;
-    let buffer = [[DVCircularBuffer alloc] initWithCapacity:capacity];
+    let buffer = [[DLMCircularBuffer alloc] initWithCapacity:capacity];
     XCTAssertNotNil(buffer);
     
     // try reading from empty buffer
@@ -70,7 +70,7 @@
 -(void)testReadWrite
 {
     let capacity = 1000;
-    let buffer = [[DVCircularBuffer alloc] initWithCapacity:capacity];
+    let buffer = [[DLMCircularBuffer alloc] initWithCapacity:capacity];
     XCTAssertNotNil(buffer);
     
     let input = "ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890\n";

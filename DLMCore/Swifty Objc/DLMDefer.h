@@ -1,13 +1,13 @@
 //
-//  DVDefer.h
+//  DLMDefer.h
 //  DLMCore
 //
 //  Created by Doug Mccoy on 4/11/18.
 //  Copyright © 2018 doogilasovich. All rights reserved.
 //
 
-#ifndef DVDefer_h
-#define DVDefer_h
+#ifndef DLMDefer_h
+#define DLMDefer_h
 
 // taken from: https://pspdfkit.com/blog/2017/even-swiftier-objective-c/
 
@@ -22,4 +22,4 @@ static void dv_defer_cleanup_block(__strong void(^*block)(void)) {
 }
 #pragma clang diagnostic pop
 
-#endif /* DVDefer_h */
+#endif /* DLMDefer_h */

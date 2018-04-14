@@ -8,7 +8,7 @@
 
 #import <XCTest/XCTest.h>
 #import "AutoVarLet.h"
-#import "DVKeypaths.h"
+#import "DLMKeypaths.h"
 
 @interface KeypathTests : XCTestCase
 
@@ -32,15 +32,15 @@
     
     let array = @[@"string", @"asdfasdf"];
     
-    let arrayCountKeypath = DV_KEYPATH(array, count);    
+    let arrayCountKeypath = DLM_KEYPATH(array, count);    
     XCTAssertTrue([arrayCountKeypath isEqualToString:@"count"]);
     
-    let descriptionLength = DV_KEYPATH(array, description.length);
+    let descriptionLength = DLM_KEYPATH(array, description.length);
     XCTAssertTrue([descriptionLength isEqualToString:@"description.length"]);
     
     // uncomment the next line to see compile time check of incorrect keypath (if DEBUG is defined)
     // Property 'count' not found on object of type 'id _Nullable'
-    // let notARealKeypath = DV_KEYPATH(array, firstObject.count);
+    // let notARealKeypath = DLM_KEYPATH(array, firstObject.count);
 
     
 

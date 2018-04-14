@@ -1,13 +1,13 @@
 //
-//  DVGenerics.h
+//  DLMGenerics.h
 //  DLMCore
 //
 //  Created by Doug Mccoy on 4/11/18.
 //  Copyright © 2018 doogilasovich. All rights reserved.
 //
 
-#ifndef DVGenerics_h
-#define DVGenerics_h
+#ifndef DLMGenerics_h
+#define DLMGenerics_h
 
 // taken from: https://gist.github.com/steipete/d6ba2d5a5cb939a2675ee20216fb45c8
 
@@ -27,7 +27,7 @@
  @note id-casted objects will create a warning when copy is called on them as there are multiple
  declarations available. Either cast to specific type or to NSObject to work around this.
  */
-@interface NSArray <ElementType> (DVSafeCopy)
+@interface NSArray <ElementType> (DLMSafeCopy)
 
 /// Same as `copy` but retains the generic type.
 - (NSArray <ElementType> *)copy;
@@ -37,7 +37,7 @@
 
 @end
 
-@interface NSSet <ElementType> (DVSafeCopy)
+@interface NSSet <ElementType> (DLMSafeCopy)
 
 /// Same as `copy` but retains the generic type.
 - (NSSet <ElementType> *)copy;
@@ -47,7 +47,7 @@
 
 @end
 
-@interface NSDictionary <KeyType, ValueType> (DVSafeCopy)
+@interface NSDictionary <KeyType, ValueType> (DLMSafeCopy)
 
 /// Same as `copy` but retains the generic type.
 - (NSDictionary <KeyType, ValueType> *)copy;
@@ -57,7 +57,7 @@
 
 @end
 
-@interface NSOrderedSet <ElementType> (DVSafeCopy)
+@interface NSOrderedSet <ElementType> (DLMSafeCopy)
 
 /// Same as `copy` but retains the generic type.
 - (NSOrderedSet <ElementType> *)copy;
@@ -67,18 +67,18 @@
 
 @end
 
-@interface NSHashTable <ElementType> (DVSafeCopy)
+@interface NSHashTable <ElementType> (DLMSafeCopy)
 
 /// Same as `copy` but retains the generic type.
 - (NSHashTable <ElementType> *)copy;
 
 @end
 
-@interface NSMapTable <KeyType, ValueType> (DVSafeCopy)
+@interface NSMapTable <KeyType, ValueType> (DLMSafeCopy)
 
 /// Same as `copy` but retains the generic type.
 - (NSMapTable <KeyType, ValueType> *)copy;
 
 @end
 
-#endif /* DVGenerics_h */
+#endif /* DLMGenerics_h */
