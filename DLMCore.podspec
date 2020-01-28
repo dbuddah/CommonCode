@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "DLMCore"
-  s.version      = "0.0.1"
+  s.version      = "0.0.3"
   s.summary      = "A repository of core code used by most of my projects"
 
   # This description is used to generate tags and improve search results.
@@ -73,7 +73,7 @@ a Audio Ring Buffer
    s.ios.deployment_target = "8.0"
   # s.osx.deployment_target = "10.7"
   # s.watchos.deployment_target = "2.0"
-   s.tvos.deployment_target = "8.0"
+   s.tvos.deployment_target = "9.0"
 
 
   # ――― Source Location ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
